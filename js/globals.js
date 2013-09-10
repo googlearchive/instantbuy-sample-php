@@ -1,6 +1,5 @@
 /**
  * This file contains all global variables.
- * @author niketas(Niketa Srivastava)
  */
 // Page transition type.
 var transitionType;
