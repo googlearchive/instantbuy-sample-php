@@ -1,4 +1,4 @@
-PHP Quick Start Sample for Instant Buy API Copyright (C) 2013 Google Inc.
+PHP Sample for Instant Buy API Copyright (C) 2013 Google Inc.
 
 instantbuy-quickstart-sample-php
 ================================
