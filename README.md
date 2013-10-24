@@ -1,6 +1,6 @@
 PHP Sample for Instant Buy API Copyright (C) 2013 Google Inc.
 
-instantbuy-quickstart-sample-php
+instantbuy-sample-php
 ================================
 
 Basic PHP implementation of the Google Wallet for Instant Buy API.

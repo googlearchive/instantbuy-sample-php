@@ -110,12 +110,12 @@ function EchoIndex() {
     $_COOKIE['email'].'</a></li>'.
     '<li><a class="sign-out block" href="javascript://"
     onclick="bikeStore.Sso.logout()"> Logout </a></li></ul>';
-    $loginClasses = 'nav-username';
+    $loginClasses = 'nav-username nav-username-width';
     $headingClasses = 'nav-filter';
   }
   else {
     $loginHeader = '<a class="sign-out hide" href = "#"></a>'.
-      '<div style="margin-top:10%">
+      '<div class="customBtn">
          <div class="g-signin" data-callback="render"
           data-clientid="'.$clientId.'"
           data-scope="'.SCOPES.'"
@@ -179,8 +179,7 @@ function EchoIndex() {
     bikeStore.Sso.handleLoginResult(authResult);
   }
   </script>
-  <script src="https://apis.google.com/js/plusone.js?onload=render">
-  </script>
+  <script src="https://apis.google.com/js/plusone.js?onload=render"></script>
   </head>
   <body>
 PAGEHEADER;

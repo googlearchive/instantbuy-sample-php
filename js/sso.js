@@ -18,12 +18,9 @@ var bikeStore = bikeStore || {};
         gapi.client.load('oauth2', 'v2', function() {
           bikeStore.Cookie.setAccessToken(authResult['access_token'],
             authResult['expires_at']);
-          console.log(authResult);
           var request = gapi.client.oauth2.userinfo.get();
           request.execute(sso.handleEmail);
         }); // Trigger request to get the email address.
-      } else {
-        console.log(authResult['error']);
       }
     }
   };
@@ -35,6 +32,7 @@ var bikeStore = bikeStore || {};
   sso.handleEmail = function(obj) {
     bikeStore.Cookie.setEmail(obj['email']);
     $('.nav-filter').attr('class','nav-filter');
+    $('.nav-username').attr('class', 'nav-username nav-username-width');
     $('.nav-username').html('<ul><li><a class="sign-out block" href = "#">' +
       obj['email'] + '</a></li><li><a class="sign-out block" href="#"' +
       'onclick="bikeStore.Sso.logout()"> Logout </a></li></ul>');
@@ -60,11 +58,8 @@ var bikeStore = bikeStore || {};
       dataType: 'jsonp',
       success: function(nullResponse) {
         $.post('logout','', function() {
-          document.location.href = "/";
+          document.location.href = '/';
         });
-      },
-      error: function(e) {
-        console.log('Error');
       }
     });
   };

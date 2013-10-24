@@ -278,8 +278,10 @@ var bikeStore = bikeStore || {};
     },
     render: function() {
       var i = 0;
+      var item;
       var total = 0;
       var description = '';
+      var unitPrice;
       this.$el.html('');
       if (this.collection.length == 0) {
         $.mobile.changePage('#item-selection', {
@@ -289,8 +291,8 @@ var bikeStore = bikeStore || {};
       }
       // Fetch all items in the cart.
       for (i = 0; i < this.collection.length; i++) {
-        var item = this.collection.at(i);
-        var unitPrice = parseFloat(item.get('unitPrice'));
+        item = this.collection.at(i);
+        unitPrice = parseFloat(item.get('unitPrice'));
         if (windowWidth >= WIDTH_360) {
           description = item.get('description');
         }
@@ -360,11 +362,12 @@ var bikeStore = bikeStore || {};
       var total = 0;
       var item;
       var description = '';
+      var unitPrice;
       this.$el.html('');
       // Fetch all items in the cart.
       for (i = 0; i < this.collection.length; i++) {
         item = this.collection.at(i);
-        var unitPrice = parseFloat(item.get('unitPrice'));
+        unitPrice = parseFloat(item.get('unitPrice'));
         if (windowWidth >= WIDTH_360) {
           description = item.get('description');
         }
@@ -446,6 +449,7 @@ var bikeStore = bikeStore || {};
     },
     render: function() {
       var i = 0;
+      var item;
       var total = 0;
       var unitPrice = 0;
       var description = '';

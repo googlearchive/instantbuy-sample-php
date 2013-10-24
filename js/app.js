@@ -2,7 +2,6 @@
  * This file contains the application logic. It handles all of the user actions
  * on the page, initializes views, variables and cookies, and makes AJAX
  * requests to the server for the JWTs.
- *
  */
 var bikeStore = bikeStore || {};
 
@@ -89,7 +88,7 @@ var bikeStore = bikeStore || {};
   var cartView;
 
   /**
-   * Confirmation page displays all items in the cart and implements the place
+   * Confirmation page displays all items in the cart and implements the place 
    * order button.
    * @type {bikeStore.Views.ConfirmationView}
    */
@@ -336,3 +335,4 @@ var bikeStore = bikeStore || {};
   // Calling init() function to initialize the application.
   init();
 })(window.bikeStore.App = window.bikeStore.App || {});
+

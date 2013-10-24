@@ -203,20 +203,28 @@ nav div.nav-username {
   float: right;
   font-size: 1.1em;
 }
+nav div.nav-username-width {
+  width: 60%;
+}
 nav div.nav-username ul{
   text-align: right;
 }
 nav div.nav-username ul li:first-child{
   display: inline-block;
-  margin: 0px 10px 0px 0px;
-  padding: 0px;
+  margin: 0 10px 0 0;
+  overflow: hidden;
+  padding: 0;
   text-align: right;
+  text-overflow: ellipsis;
+  width: 70%;
 }
 nav div.nav-username ul li:last-child{
   display: inline-block;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
   text-align: right;
+  text-overflow: ellipsis;
 }
 body.signed-in .sign-in,
 .g-signin
@@ -321,6 +329,9 @@ li[id]:target>div a.button.add-to-cart {
   margin-bottom: 0;
 }
 li[id] a.close {
+  background-image: url(../img/close.png);
+  background-position: top right;
+  background-repeat: no-repeat;
   background: url(../img/close.png) top right no-repeat,
     -webkit-linear-gradient(right top, white 0%, white 50%, transparent 50%,
     transparent 100%), no-repeat;
@@ -505,6 +516,27 @@ body.checkout>div>footer {
 span.secondHalf {
   display: none;
 }
+.customBtn {
+  margin-top: 10% !important;
+  position: relative !important;
+  width: 112px !important;
+}
+.customBtn div,
+.customBtn iframe {
+  height: 36px !important;
+  width: 111px !important;
+}
+.customBtn div button {
+  cursor: pointer;
+  height: 35px;
+  left: 0;
+  opacity: 0;
+  outline: 0 none;
+  position: absolute;
+  top: 0;
+  width: 112px;
+  z-index: 10000;
+}
 @media only screen and (min-width: 680px) and (max-width: 700px) {
   .product-name-head {
     padding-left:3% !important;
@@ -551,11 +583,11 @@ span.secondHalf {
   }
   a.sign-out,
   .sign-in {
-    background: #fff;
-    border-left: 1px solid rgba(0,0,0,0.15);
     font-weight: 600;
+    margin: 0;
     text-decoration: none;
     text-transform: uppercase;
+    vertical-align: middle;
   }
   nav div.nav-username {
     padding: 8px;
@@ -668,6 +700,7 @@ span.secondHalf {
 }
 @media only screen and (max-width: 480px) {
   nav div.nav-username {
+    padding: 0;
     width: 100%;
   }
   nav div.nav-username-no-width {
@@ -678,18 +711,30 @@ span.secondHalf {
     text-align: center
   }
   nav div.nav-username ul li:first-child{
+    background: #fff;
+    border-left: 1px solid rgba(0,0,0,0.15);
     display: inline-block;
-    margin: 0px;
-    padding: 0px;
+    float: left;
+    height: 35px;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 0 0 0;
     text-align: left;
-    width: 48%;
+    text-overflow: ellipsis;
+    width: 69%;
   }
   nav div.nav-username ul li:last-child{
+    background: #fff;
+    border-left: 1px solid rgba(0,0,0,0.15);
     display: inline-block;
-    margin: 0px;
-    padding: 0px;
+    float: left;
+    height: 35px;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 0 0 0;
     text-align: right;
-    width: 48%;
+    text-overflow: ellipsis;
+    width: 30%;
   }
   .row-height {
     height: 50px;
@@ -708,10 +753,10 @@ span.secondHalf {
   font-wight: bold;
 }
 .no-padding-top {
-  padding-top: 0px !important;
+  padding-top: 0 !important;
 }
 .no-padding-bottom {
-  padding-bottom: 0px !important;
+  padding-bottom: 0 !important;
 }
 .product-table {
   float: right !important;

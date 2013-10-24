@@ -48,7 +48,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-mobile-rendering > * { visibility: hidden; }
 /*headers, content panels*/
 .ui-bar, .ui-body { position: relative; padding: .4em 15px; overflow: hidden; display: block; clear:both; }
-.ui-body-a, .ui-overlay-a {background: linear-gradient(#444444, #222222) repeat scroll 0 0 #222222;border: 1px solid #444444;color: #FFFFFF;font-weight: 400;text-shadow: 0 1px 0 #111111;}
+.ui-body-a, .ui-overlay-a {background: linear-gradient(#444444, #222222) repeat scroll 0 0 #222222;background-color: #000;border: 1px solid #444444;color: #FFFFFF;font-weight: 400;text-shadow: 0 1px 0 #111111;}
 .ui-bar { font-size: 16px; margin: 0; }
 .ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 { margin: 0; padding: 0; font-size: 16px; display: inline-block; }
 .ui-header, .ui-footer { position: relative; zoom: 1; }

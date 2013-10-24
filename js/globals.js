@@ -26,3 +26,4 @@ if (windowWidth <= WIDTH_320) {
 } else {
   imgSrc = "img/products/default";
 }
+
