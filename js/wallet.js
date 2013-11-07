@@ -141,7 +141,7 @@ var bikeStore = bikeStore || {};
     }
     // Persist Masked Wallet Response and Transaction Id for page refreshes.
     bikeStore.Cookie.setMaskedWallet(param.response.response);
-    bikeStore.Cookie.setTransactionId(wallet.transactionId);
+    bikeStore.Cookie.setTransactionId(Math.round(new Date()/1000));
     // Validate the JWT before proceeding
     $.post(wallet.VALIDATE_URL, 'jwt=' + param.jwt, function(response) {
       if (response === 'true') {

@@ -471,8 +471,7 @@ var bikeStore = bikeStore || {};
       this.$el.html('');
       if(this.model.get('fullWallet')) {
         email = this.model.get('fullWallet').response.response.email;
-        orderNum =
-          this.model.get('fullWallet').response.response.googleTransactionId;
+        orderNum = bikeStore.Cookie.getTransactionId();
       }
       // Fetch all items in the cart.
       for (i = 0; i < this.collection.length; i++) {
